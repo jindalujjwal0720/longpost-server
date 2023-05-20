@@ -1,5 +1,8 @@
 /node_modules
 
-.env
-.env.local
-
+# local env files anywhere in the project
+/.env.*.local
+/.env.local
+/.env
+.env.*.local+
+.env*
