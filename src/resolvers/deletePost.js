@@ -24,9 +24,9 @@ const deletePostResolver = async (req, res) => {
         message: "User ID does not match!",
       });
     }
-    await post.delete();
+    const deletedPost = await Post.findByIdAndDelete(id);
     return res.status(200).json({
-      post: post,
+      post: deletedPost,
     });
   } catch (err) {
     return res.status(500).json({

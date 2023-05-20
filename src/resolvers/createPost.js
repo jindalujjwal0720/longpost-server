@@ -14,7 +14,6 @@ const createPostResolver = async (req, res) => {
       author: author,
       content: content,
     });
-    console.log(alreadyExists);
     if (alreadyExists) {
       return res.status(400).json({
         message: "Post already exists!",
